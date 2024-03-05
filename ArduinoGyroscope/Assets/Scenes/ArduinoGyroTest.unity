@@ -216,6 +216,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1106641744}
+  - component: {fileID: 1106641745}
   m_Layer: 0
   m_Name: GyroArwing
   m_TagString: Untagged
@@ -239,6 +240,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1106641745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106641743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4476831044963d84180b913f10d56a62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ports:
+  - COM5
+  strRecieved: 
+  strData:
+  - 
+  - 
+  - 
+  - 
+  strDataRecieved:
+  - 
+  - 
+  - 
+  - 
+  qw: 0
+  qx: 0
+  qy: 0
+  qz: 0
 --- !u!1 &1580252185
 GameObject:
   m_ObjectHideFlags: 0

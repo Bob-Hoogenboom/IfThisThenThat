@@ -263,7 +263,7 @@ void loop() {
         #ifdef OUTPUT_READABLE_QUATERNION
             // display quaternion values in easy matrix form: w x y z
             mpu.dmpGetQuaternion(&q, fifoBuffer);
-            Serial.print("quat\t");
+            //Serial.print("quat\t");
             Serial.print(q.w);
             Serial.print(",");
             Serial.print(q.x);
@@ -347,7 +347,7 @@ void loop() {
         digitalWrite(LED_PIN, blinkState);
 
         //Unity needs a delay to read data
-        delay(100);
+        delay(33); //30 frames a second
     }
 }
 
