@@ -48,14 +48,13 @@ public class GyroHandler : MonoBehaviour
         {
             ReadGyroScope();
         }
-
     }
 
 
     private void ReadGyroScope()
     {
         strRecieved = arduinoPort.ReadLine();
-
+        //Debug.Log(strRecieved);
         strData = strRecieved.Split(",");
         if (strData[0] != "" && strData[1] != "" && strData[2] != "" && strData[3] != "") //Makes sure all quaternion data is ready (Values: W,X,Y,Z)
         {
