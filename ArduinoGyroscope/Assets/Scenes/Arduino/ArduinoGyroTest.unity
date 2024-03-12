@@ -308,6 +308,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4225814188601071754, guid: de924acbe46ce5747a348506f137f919, type: 3}
+      propertyPath: ports.Array.data[0]
+      value: COM6
+      objectReference: {fileID: 0}
     - target: {fileID: 4225814188601071755, guid: de924acbe46ce5747a348506f137f919, type: 3}
       propertyPath: m_RootOrder
       value: 1
