@@ -3,7 +3,72 @@ guid: ec0945b093d0e264089146e144c952a6
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: color_44
+    second: {fileID: 2100000, guid: 9973d78b53a888e4fa89235db90102d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: color_55
+    second: {fileID: 2100000, guid: 11e74efeef2bf9647a12abe6b2332886, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: color_66
+    second: {fileID: 2100000, guid: 1f972b8ab13c7b3489ceadd6a24dbc47, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: color_77
+    second: {fileID: 2100000, guid: 3f9693aba8a37e74fad195353e44be51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: color_88
+    second: {fileID: 2100000, guid: fc16f3f3e488c5041aef9ee885d0d106, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: color_99
+    second: {fileID: 2100000, guid: 5e751efaa203557459a2b5fb49a04436, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: color_9A
+    second: {fileID: 2100000, guid: 1c6f1e911eb06bd4fba1e553b48b93c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: color_AA
+    second: {fileID: 2100000, guid: 8c0e077381ddd224c8f87208604e812e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: color_BB
+    second: {fileID: 2100000, guid: 29a712a0ff32645409f838001873dc67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: color_BC
+    second: {fileID: 2100000, guid: 6540a22f37e2ed040b0c3945eec029bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: color_CC
+    second: {fileID: 2100000, guid: 5fc78045ae1cfc842aa7dab1794e9bd6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: color_DD
+    second: {fileID: 2100000, guid: a9bf3923826e4114a90018b7985cb129, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: color_EE
+    second: {fileID: 2100000, guid: ba6014f6a43f6e344b11145457f05038, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -35,7 +100,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 50
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -88,7 +153,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.5
+    globalScale: 0.01
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
