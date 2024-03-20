@@ -76,10 +76,11 @@ void dmpDataReady() {
     mpuInterrupt = true;
 }
 
+//Arduino Feedback Variables
+int BlueLED = 3;
+int RedLED = 4;
+int Buzzer = 5;
 
-// ================================================================
-// ===                      INITIAL SETUP                       ===
-// ================================================================
 
 void setup() {
     // join I2C bus (I2Cdev library doesn't do this automatically)
@@ -160,15 +161,15 @@ void setup() {
         Serial.println(F(")"));
     }
 
+    //feedback pin setup
+    pinMode(BlueLED, OUTPUT);
+    pinMode(RedLED, OUTPUT);
+    pinMode(Buzzer, OUTPUT);
+
     // configure LED for output
     pinMode(LED_PIN, OUTPUT);
 }
 
-
-
-// ================================================================
-// ===                    MAIN PROGRAM LOOP                     ===
-// ================================================================
 
 void loop() {
     // if programming failed, don't try to do anything
@@ -191,9 +192,31 @@ void loop() {
         // blink LED to indicate activity
         blinkState = !blinkState;
         digitalWrite(LED_PIN, blinkState);
-
-        //Unity needs a delay to read data
-        delay(33); //30 frames a second
     }
+    String unity = Serial.readString();
+
+    if (unity == "Red") 
+    {
+      digitalWrite(RedLED, HIGH);
+      delay(1000);
+      digitalWrite(RedLED, LOW);
+      
+    }  
+    if (unity == "Blue") 
+    {
+      digitalWrite(BlueLED, HIGH);
+      delay(1000);
+      digitalWrite(BlueLED, LOW);
+    } 
+    if (unity == "Buzzer") 
+    {
+      tone(Buzzer, 1000);
+      delay(1000);  
+      noTone(Buzzer);     
+    } 
+    
+    
+     //Unity needs a delay to read data
+    delay(33); //30 frames a second
 }
 
