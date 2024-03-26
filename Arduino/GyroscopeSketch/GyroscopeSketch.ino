@@ -76,12 +76,6 @@ void dmpDataReady() {
     mpuInterrupt = true;
 }
 
-//Arduino Feedback Variables
-int BlueLED = 3;
-int RedLED = 4;
-int Buzzer = 5;
-
-
 void setup() {
     // join I2C bus (I2Cdev library doesn't do this automatically)
     #if I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE
@@ -161,18 +155,13 @@ void setup() {
         Serial.println(F(")"));
     }
 
-    //feedback pin setup
-    pinMode(BlueLED, OUTPUT);
-    pinMode(RedLED, OUTPUT);
-    pinMode(Buzzer, OUTPUT);
-
     // configure LED for output
     pinMode(LED_PIN, OUTPUT);
 }
 
 
 void loop() {
-    // if programming failed, don't try to do anything
+    // if programming failed, don't try to do anything    
     if (!dmpReady) return;
     // read a packet from FIFO
     if (mpu.dmpGetCurrentFIFOPacket(fifoBuffer)) { // Get the Latest packet 
@@ -193,29 +182,6 @@ void loop() {
         blinkState = !blinkState;
         digitalWrite(LED_PIN, blinkState);
     }
-    String unity = Serial.readString();
-
-    if (unity == "Red") 
-    {
-      digitalWrite(RedLED, HIGH);
-      delay(1000);
-      digitalWrite(RedLED, LOW);
-      
-    }  
-    if (unity == "Blue") 
-    {
-      digitalWrite(BlueLED, HIGH);
-      delay(1000);
-      digitalWrite(BlueLED, LOW);
-    } 
-    if (unity == "Buzzer") 
-    {
-      tone(Buzzer, 1000);
-      delay(1000);  
-      noTone(Buzzer);     
-    } 
-    
-    
      //Unity needs a delay to read data
     delay(33); //30 frames a second
 }
